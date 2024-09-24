@@ -22,7 +22,7 @@ export default function App() {
       <h1>This room is LIT</h1>
       <img src={lightOn} alt="light bulb on" />
       <div className='switch'>
-        <div className='switch-button'onClick={changeLight} ></div>
+        <div className='switch-button' onClick={changeLight} ></div>
       </div>
 
       <input type="range" ></input>
