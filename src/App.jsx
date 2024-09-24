@@ -16,17 +16,20 @@ export default function App() {
   }
 
   const lightOn = light ? bulbOn : bulbOff;
+
+  const switchButton = light ? 'switch-button' : 'switch-button.dark';
+  const switchBackground = light ? 'switch' : 'switch.dark';
   
   return (
-    <div>
-      <h1>This room is LIT</h1>
-      <img src={lightOn} alt="light bulb on" />
-      <div className='switch'>
-        <div className='switch-button' onClick={changeLight} ></div>
-      </div>
+      <div className="switch.dark">
+        <h1>This room is LIT</h1>
+        <img src={lightOn} alt="light bulb on" />
+        <div className='switch'>
+          <div className={switchButton} onClick={changeLight} ></div>
+        </div>
 
-      <input type="range" ></input>
-    </div>
+        <input type="range" ></input>
+      </div>
   )
 }
 
