@@ -8,3 +8,5 @@ HINTS:
 EXTRA:
 - add a sound effect when the light switch is clicked (an audio file is provided in the assets folder)
 - add a brightness control feature using an input with type of "range" (look up the filter CSS property and its brightness function)
+
+- this stack overflow helped me figure out how to chnge the lights - https://stackoverflow.com/questions/58329641/react-toggling-between-two-images-on-click-in-stateless-component 

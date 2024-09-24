@@ -1,15 +1,18 @@
 import bulbOn from './assets/bulb-on.png'
 import bulbOff from  './assets/bulb-off.png'
+import clickSound from './assets/light-switch-sound.mp3'
 
 import './App.css'
 import { useState } from 'react'
 
-export default function App({handleClick}) {
+export default function App() {
   const [light, setLight] = useState(true); 
+  const [audio] = useState(new Audio (clickSound))
   
-  function changeLight() {
+  const changeLight = () => {
     setLight(!light);
-    handleClick()
+    audio.currentTime = 0;
+    audio.play()
   }
 
   const lightOn = light ? bulbOn : bulbOff;
